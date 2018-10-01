@@ -4,7 +4,9 @@ This contains Docker files and related configuration files for a container of [n
 
 `Dockerfile` is what is used to build [the docker container](https://hub.docker.com/r/slipoh/neo-scan/) found on Docker Hub.
 
-`docker-compose.yml` is a a fully working private network with neo-scan connected to it. It uses prebuilt images.
+`docker-compose.yml` is a fully working private network with neo-scan connected to it. It build the Dockerfile.
+
+`neo-privnet.wallet` is the wallet file that contains sufficient GAS.
 
 # Privnet with GAS and with neo-scan — quick start
 
@@ -26,11 +28,6 @@ docker-compose up
 ```
 
 It will take some time to set up.
-
-While you wait, add this line to your hosts file:
-```
-127.0.0.1 neo-privnet
-```
 
 That allows you to connect to the privnet NEO nodes with the URLs returned by the neo-scan container. If you're using neo-python to connect to the privnet, you can use the standard configuration. 127.0.0.1:30333 will continue to work, for example.
 
