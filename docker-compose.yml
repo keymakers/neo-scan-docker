@@ -1,6 +1,7 @@
 version: "3"
 services:
   neo-scan:
+    build: .
     image: slipoh/neo-scan
     container_name: "neo-scan"
     ports:
